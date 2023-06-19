@@ -32,6 +32,9 @@ namespace gd {
             Speed m_speed; // 0xf4
             bool m_bMiniMode; // 0xf8
             bool m_bTwoPlayerMode;  // 0xf9
+            float m_songStartOffset; // 0xFC
+            bool m_fadeIn; // 0x100
+            bool m_fadeOut; // 0x101
             PAD(23);
             bool m_bFlipped; // 0x111
             PAD(2);

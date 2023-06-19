@@ -71,6 +71,10 @@ namespace gd {
 		bool isBackgroundMusicPlaying(const std::string& path) {
 			return path == m_sFilePath && isBackgroundMusicPlaying();
 		}
+		void setBackgroundMusicTime(float time) {
+			__asm movss xmm1, time;
+			reinterpret_cast<void(__thiscall*)(FMODAudioEngine*)>(base + 0x23fb0)(this);
+		}
 	};
 }
 
